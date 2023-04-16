@@ -11,7 +11,7 @@ class dashboard extends StatelessWidget {
         extendBody: true,
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         floatingActionButton: FloatingActionButton(
-          backgroundColor: Color(0x0ffF86366),
+          backgroundColor: Color(0x0ff8653F7),
           onPressed: () {},
           child: Icon(Icons.fingerprint_sharp),
         ),
@@ -21,7 +21,7 @@ class dashboard extends StatelessWidget {
             shape: CircularNotchedRectangle(),
             color: Colors.white,
             child: IconTheme(
-              data: IconThemeData(color: Colors.grey[850]),
+              data: IconThemeData(color: Color(0x0ff8653F7)),
               child: Padding(
                 padding: const EdgeInsets.all(5.0),
                 child: Row(

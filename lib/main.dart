@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:restored_tzy/login.dart';
+import 'package:restored_tzy/register.dart';
 import 'dashboard.dart';
 
 void main() {
@@ -13,7 +15,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: dashboard(),
+      routes: {
+        "|goTo_login": (context) => loginPage(),
+        "|goTo_register": (context) => registerPage(),
+        "|goTo_home": (context) => dashboard(),
+      },
+      home: loginPage(),
     );
   }
 }
