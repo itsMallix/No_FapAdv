@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'appbarTop.dart';
 
 class dashboard extends StatelessWidget {
   const dashboard({super.key});
@@ -9,6 +10,20 @@ class dashboard extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Center(child: Text('Test')),
+        appBar: topBar(
+          actions: [
+            IconButton(
+              onPressed: () {},
+              icon: Icon(Icons.notifications),
+              color: Colors.grey[900],
+            ),
+            IconButton(
+              onPressed: () {},
+              icon: Icon(Icons.panorama_fish_eye_sharp),
+              color: Colors.grey[900],
+            ),
+          ],
+        ),
         extendBody: true,
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         floatingActionButton: FloatingActionButton(
