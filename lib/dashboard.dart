@@ -1,0 +1,56 @@
+import 'package:flutter/material.dart';
+
+class dashboard extends StatelessWidget {
+  const dashboard({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(child: Text('Test')),
+        extendBody: true,
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+        floatingActionButton: FloatingActionButton(
+          backgroundColor: Color(0x0ffF86366),
+          onPressed: () {},
+          child: Icon(Icons.fingerprint_sharp),
+        ),
+        bottomNavigationBar: ClipRRect(
+          borderRadius: BorderRadius.circular(20),
+          child: BottomAppBar(
+            shape: CircularNotchedRectangle(),
+            color: Colors.white,
+            child: IconTheme(
+              data: IconThemeData(color: Colors.grey[850]),
+              child: Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    IconButton(
+                      icon: Icon(Icons.home_filled),
+                      onPressed: () {},
+                    ),
+                    IconButton(
+                      icon: Icon(Icons.task_outlined),
+                      onPressed: () {},
+                    ),
+                    SizedBox(width: 25),
+                    IconButton(
+                      icon: Icon(Icons.chat),
+                      onPressed: () {},
+                    ),
+                    IconButton(
+                      icon: Icon(Icons.person),
+                      onPressed: () {},
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
