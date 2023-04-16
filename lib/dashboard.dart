@@ -10,21 +10,42 @@ class dashboard extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: SfRadialGauge(
-          axes: <RadialAxis>[
-            RadialAxis(
-              minimum: 0,
-              maximum: 100,
-              showLabels: false,
-              showTicks: false,
-              axisLineStyle: AxisLineStyle(
-                thickness: 0.2,
-                cornerStyle: CornerStyle.bothCurve,
-                color: Colors.grey[400],
-                thicknessUnit: GaugeSizeUnit.factor,
+        body: Container(
+          height: 60,
+          width: 60,
+          child: SfRadialGauge(
+            axes: <RadialAxis>[
+              RadialAxis(
+                minimum: 0,
+                maximum: 100,
+                showLabels: false,
+                showTicks: false,
+                axisLineStyle: AxisLineStyle(
+                  thickness: 0.2,
+                  cornerStyle: CornerStyle.bothCurve,
+                  color: Colors.grey[400],
+                  thicknessUnit: GaugeSizeUnit.factor,
+                ),
+                pointers: <GaugePointer>[
+                  RangePointer(
+                    value: 75,
+                    width: 0.2,
+                    cornerStyle: CornerStyle.bothCurve,
+                    sizeUnit: GaugeSizeUnit.factor,
+                    gradient: SweepGradient(
+                      colors: <Color>[Color(0xFF00a9b5), Color(0xFF0a4edeb)],
+                      stops: <double>[0.25, 0.77],
+                    ),
+                  ),
+                  MarkerPointer(
+                    value: 30,
+                    markerType: MarkerType.circle,
+                    color: Color(0xFF87e8e8),
+                  )
+                ],
               ),
-            )
-          ],
+            ],
+          ),
         ),
         appBar: topBar(
           actions: [
