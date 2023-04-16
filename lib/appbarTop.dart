@@ -11,7 +11,9 @@ class topBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       actions: actions,
       backgroundColor: bgcolor,
-      title: Image.asset('assets/logo.png'),
+      title: Image.asset(
+        'assets/logo.png',
+      ),
     );
   }
 

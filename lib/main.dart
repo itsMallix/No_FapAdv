@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:restored_tzy/login.dart';
 import 'package:restored_tzy/register.dart';
 import 'dashboard.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
 
 void main() {
   runApp(const MyApp());

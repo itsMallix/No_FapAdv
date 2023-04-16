@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
 import 'appbarTop.dart';
 
 class dashboard extends StatelessWidget {
@@ -9,17 +10,32 @@ class dashboard extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: Center(child: Text('Test')),
+        body: SfRadialGauge(
+          axes: <RadialAxis>[
+            RadialAxis(
+              minimum: 0,
+              maximum: 100,
+              showLabels: false,
+              showTicks: false,
+              axisLineStyle: AxisLineStyle(
+                thickness: 0.2,
+                cornerStyle: CornerStyle.bothCurve,
+                color: Colors.grey[400],
+                thicknessUnit: GaugeSizeUnit.factor,
+              ),
+            )
+          ],
+        ),
         appBar: topBar(
           actions: [
             IconButton(
               onPressed: () {},
-              icon: Icon(Icons.notifications),
+              icon: Image.asset('assets/notification.png'),
               color: Colors.grey[900],
             ),
             IconButton(
               onPressed: () {},
-              icon: Icon(Icons.panorama_fish_eye_sharp),
+              icon: Image.asset('assets/alert.png'),
               color: Colors.grey[900],
             ),
           ],
