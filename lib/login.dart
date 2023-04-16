@@ -90,7 +90,7 @@ class _loginPageState extends State<loginPage> {
                     onPressed: () {
                       if (_formState.currentState!.validate()) {
                         //Do
-                        Navigator.pushNamed(context, '|goTo_home');
+                        Navigator.pushNamed(context, '|goTo_dashboard');
                       } else {}
                     },
                     style: ElevatedButton.styleFrom(

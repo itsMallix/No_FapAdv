@@ -18,7 +18,10 @@ class MyApp extends StatelessWidget {
       routes: {
         "|goTo_login": (context) => loginPage(),
         "|goTo_register": (context) => registerPage(),
-        "|goTo_home": (context) => dashboard(),
+        "|goTo_dashboard": (context) => dashboard(),
+        // "|goTo_challange": (context) => ,
+        // "|goTo_forums": (context) => ,
+        // "|goTo_profile": (context) => ,
       },
       home: loginPage(),
     );
